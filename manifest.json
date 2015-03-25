@@ -1,0 +1,14 @@
+{
+   "author": "Brodie Austin",
+   "content_scripts": [ {
+      "css": [ "styles.css"],
+      "js": [ "scripts.js" ],
+      "matches": [ "https://encore.skokielibrary.info/*" ]
+   } ],
+   "description": "A better UI for Encore",
+   "manifest_version": 2,
+   "name": "Better Encore",
+   "permissions": [ "https://encore.skokielibrary.info/*"],
+   "short_name": "Better Encore",
+   "version": "0.1"
+}
