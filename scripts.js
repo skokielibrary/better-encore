@@ -1,34 +1,12 @@
 console.log('better encore')
 
-var empty_covers = function(){
-  var results = document.getElementsByClassName('searchResult');
-
-  console.log(results.length)
-
-  for (i = 0; i < results.length; i++){
-    console.log('---')
-    console.log(i)
-    var result = results[i];
-    console.log(result)
-    var cover = result.getElementsByClassName('itemBookCover')[0];
-    console.log(cover)
-    console.log(cover.length)
-
-    if (cover){
-      console.log('cover')
-    }
-    else{
-      console.log('no cover')
-    }
-  }
-}
-
 var replace_thumbs = function(){
   var covers = document.getElementsByClassName('itemBookCover');
 
   for (i = 0; i < covers.length; i++){
     var cover = covers[i];
-    var img = cover.getElementsByTagName('img')[0];
+    var old_img = cover.getElementsByTagName('img')[0];
+    var new_img = doc
     var src = img.src;
     var new_src = src.replace('thumb', 'large');
     img.src = new_src;
