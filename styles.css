@@ -1,108 +1,543 @@
 /*things to hide*/
-#rightColumn, #prevNextResultNavigator, .prevNextHeader, #bestBetsAnyComponent, #NoveListToggleWrapper, .itemMediaIcon, .addtlActions, .addthis_toolbox, #genericLinkImage, #articlesPreviewAnyComponent, .pipeDivider, #googleBookPreviewAnyComponent, #eight56LinkComponent, .gridBrowseCol1, .ratingReviewsSummary, #directLinkImage, .pageWrapperPush, .myAccountBar, #bookCartLinkAnyComponent{display: none !important;}
-
-/*new styles*/
-*, *:before, *:after{box-sizing: border-box;}
-*{box-shadow: none !important;}
-body{padding-top: 0 !important; background-color: #fff !important; font: 400 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif !important; color: #303030 !important;}
-.customHeader, .customRecordDetailPage .customHeader.customToggle, .customRecordDetailPage .customHeader.customToggle:hover{color: #303030 !important;}
-#contentWrapper, #homepageContentWrapper{position: static !important; width: 100% !important; box-shadow: none !important;}
-.recordDetailPage #mainContentArea{border-top: 0 !important;}
-.customHighlight{background-color: transparent !important;   border-bottom: 0; box-shadow: none;}
-.contentCategoryLink{background-image: none !important;}
-
-.button{background-image: none !important; background-color: transparent !important; border-radius: 0 !important; padding: .5rem 1rem !important;}
-
-/*top banner*/
-#bannertop{position: static; top: 0; right: 1rem; float: none !important; width: 60% !important; max-width: 800px; margin: 0  auto .6rem !important; height: 36px; line-height: 36px !important; padding: 0 !important; background-color: transparent; overflow: hidden; z-index: 1000;}
-
-#bannertop a{display: inline-block; margin-left: 1rem; font-size: .8rem; color: #888;}
-#patronAlertsUpdateAnyComponent img{margin-top: 0 !important; vertical-align: middle !important;}
-
-/*search box*/
-#searchbox{width: 100% !important; float: none !important; margin: 0 0 24px 0 !important;}
-#searchbox > form{position: relative; display: block !important; margin: auto !important; border-bottom: 1px solid #b2b2b2 !important; text-align: left !important;}
-.recordDetailPage #searchbox > form{width: 60% !important; max-width: 800px; }
-.searchContent{display: block !important; width: 100% !important;}
-.searchText{display: none !important;}
-#searchString{width: 80% !important; height: 42px; padding: 6px 6px 0 6px !important; border: 0 !important; outline: 0 !important; font-style: italic; font-family: Georgia, serif; color: #aaa;}
-.searchSubmit{position: absolute; top: 0; right: 0;}
-.advSearch{margin-top: 6px;}
-
-.backToPrevious{width: 60% !important; max-width: 800px; height: 24px; margin: 1rem auto 0 auto !important;}
-#backToResultsLinkComponent:before{content:"\2190";}
-#backToResultsImageAnyComponent{display:none;}
-.backToPrevious .innreachLink{background: none; margin-left: 2em; padding-right: 0 !important;}
-.backToPrevious .innreachLink:after{content:" \2192";}
-
-/*search page*/
-.homepageQueryContainer .contentCategories{display: none;}
-.homepageQuery{padding: 36px 0 !important; border: 0 !important;}
-
-/*search results*/
-#mainContentArea{float: left !important;}
-.gridBrowseContent2:hover{box-shadow: none !important; border-left: 1px solid #fff !important; border-right: 1px solid #fff !important;}
-
-/*record*/
-/*.recordDetailPage #mainContentArea, .gridBrowseContent2{float: none !important; width: 100%; max-width: 740px; margin: auto;}*/
-
-#contentColumn{margin: 0 !important; overflow: hidden;}
-#mainContentArea{width: 100% !important;}
-
-
-.gridBrowseContent2{position: relative; background-color: #fbfafa; border-right: 0 !important; border-left: 0 !important;}
-
-.gridBrowseCol2, .ItemsContainer, .moreDetailsAnyComponent{display: block !important; width: 70% !important; max-width: 800px; margin: auto; overflow: hidden;}
-
-
-.gridBrowseCol2{padding: 16px 0 36px 0 !important; }
-
-.title, .customHeader{line-height: 1.1; font-family: 'Georgia', serif !important; font-weight: 400 !important;}
-.recordDetailPage .title{margin-bottom: 4px; font-size: 36px !important;}
-.title .customSecondaryText{display: none;}
-
-.itemBookCover{width: 300px !important; margin-right: 2rem; padding-right: 0 !important; text-align: right;}
-.itemBookCover img{display: none; width: 100%; height: auto; max-height: none !important;}
-
-.dpBibTitle{width: auto; padding-left: 1.5rem; padding-right: 0 !important;}
-
-.dpBibAuthor{font-family: Georgia; font-style: italic; font-size: 24px;}
-.dpBibAuthor a{color: inherit !important;}
-
-
-.dpBibTitle .recordDetailValue{margin-top: .8rem !important; font-size: .7rem;}
-.dpBibTitle .recordDetailValue > span{display: inline-block; margin-bottom: 4px; padding: 2px 4px; background-color: #ccc; color: #303030;}
-
-.availabilityMessage{padding: 0 !important;}
-.availabilitySummaryArea{margin-top: 3.5em;}
-.dpBibHoldingStatement{margin-bottom: .4em;}
-
-.itemsNotAvailable, .itemsAvailable{display: block; margin-top: 1.5em; margin-bottom: 1px; font-size: 20px; text-transform: uppercase; }
-
-.gridBrowseCol2 .requestButton{
-  margin-top: 1.4em;
+#rightColumn, #prevNextResultNavigator, .prevNextHeader, #bestBetsAnyComponent, #NoveListToggleWrapper, .itemMediaIcon, .addtlActions, .addthis_toolbox, #genericLinkImage, #articlesPreviewAnyComponent, .pipeDivider, #googleBookPreviewAnyComponent, #eight56LinkComponent, .gridBrowseCol1, .ratingReviewsSummary, #directLinkImage, .pageWrapperPush, .myAccountBar, #bookCartLinkAnyComponent, h2.facetHeader, #searchFormComponent_0, #relatedSearchesTitle, #authoritySuggestionColumn, #expandTagCloudColumn, #otherSourcesAnyComponent_0{
+  display: none !important;
 }
 
-.holdsMessage{font-style: italic;}
 
-.itemTable{width: 100%; margin: auto;}
-.itemTable th{ font-weight: 400 !important; text-transform: uppercase;}
-.recordDetailPage .itemTable td{padding: 6px 0 !important; border-bottom: 1px solid #eee;}
+/*new styles*/
+*, *:before, *:after{
+  box-sizing: border-box !important;
+}
 
-.sectionHeader{margin: 1rem 0 2px 0 !important; border-bottom: 0 !important; font-style: italic;}
+*{
+  box-shadow: none !important;
+}
+
+body{
+  padding-top: 0 !important;
+  background-color: #fff !important;
+  font: 400 16px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  color: #706259 !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: inherit !important;
+}
+
+.customLink, a{
+  color: #00747F !important;
+}
+
+.customHeader, .customRecordDetailPage .customHeader.customToggle, .customRecordDetailPage .customHeader.customToggle:hover{
+  color: #303030 !important;
+}
+
+#contentWrapper, #homepageContentWrapper{
+  position: static !important;
+  width: 100% !important;
+  box-shadow: none !important;
+  margin: auto !important;
+}
+
+.recordDetailPage #mainContentArea{
+  border-top: 0 !important;
+}
+
+.customHighlight{
+  background-color: transparent !important;
+    border-bottom: 0;
+  box-shadow: none;
+}
+
+.contentCategoryLink{
+  background-image: none !important;
+}
+
+
+.button{
+  background-image: none !important;
+  background-color: #00747F !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+  padding: .875rem 1.75rem .9375rem !important;
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+.button img{
+  display: none;
+}
+
+
+/*top banner*/
+#bannertop{
+  position: static;
+  top: 0;
+  right: 1rem;
+  float: none !important;
+  max-width: 68.75rem;
+  width: 100% !important;
+  margin: 0  auto .6rem !important;
+  height: 36px;
+  line-height: 36px !important;
+  padding: 0 !important;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+
+#bannertop a{
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: .8rem;
+  color: #888;
+}
+
+#patronAlertsUpdateAnyComponent img{
+  margin-top: 0 !important;
+  vertical-align: middle !important;
+}
+
+
+/*search box*/
+#searchbox{
+  width: 100% !important;
+  max-width: 68.75rem;
+  float: none !important;
+  margin: 0 auto 24px auto !important;
+  padding-bottom: 1rem;
+}
+
+#searchbox > form{
+  position: relative;
+  display: block !important;
+  margin: auto !important;
+  border-bottom: 1px solid #b2b2b2 !important;
+  text-align: left !important;
+}
+
+.recordDetailPage #searchbox > form{
+  width: 60% !important;
+  max-width: 68.75rem;
+ }
+
+.searchContent{
+  display: block !important;
+  width: 100% !important;
+}
+
+.searchText{
+  display: none !important;
+}
+
+#searchString{
+  width: 80% !important;
+  height: 42px;
+  padding: 6px 6px 0 6px !important;
+  border: 0 !important;
+  outline: 0 !important;
+  font-style: italic;
+  font-family: inherit;
+  color: #aaa;
+}
+
+.searchSubmit{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.advSearch{
+  margin-top: 6px;
+}
+
+
+.backToPrevious{
+  width: 60% !important;
+  max-width: 68.75rem;
+  height: 24px;
+  margin: 1rem auto 0 auto !important;
+}
+
+#backToResultsLinkComponent:before{
+  content:"\2190";
+}
+
+#backToResultsImageAnyComponent{
+  display:none;
+}
+
+.backToPrevious .innreachLink{
+  background: none;
+  margin-left: 2em;
+  padding-right: 0 !important;
+}
+
+.backToPrevious .innreachLink:after{
+  content:" \2192";
+}
+
+
+/*search page*/
+.homepageQueryContainer .contentCategories{
+  display: none;
+}
+
+.homepageQuery{
+  padding: 36px 0 !important;
+  border: 0 !important;
+}
+
 
 /*search results*/
-.searchResultsPage{}
-#leftColumn{display: none;position: fixed; top: 10rem; left: 0;}
+#mainContentArea{
+  float: left !important;
+}
+
+.gridBrowseContent2:hover{
+  box-shadow: none !important;
+  border-left: 1px solid #fff !important;
+  border-right: 1px solid #fff !important;
+}
 
 
-.searchResultsPage #mainContentArea{background: #eee;}
-.searchResult{box-sizing: border-box; width: 30% !important; height: 300px !important; float: left !important; border: 1px solid #e0e0e0; margin: 1em 1.5%; background: #fff; clear: none !important; font-size: 80%;}
+/*record*/
+/*.recordDetailPage #mainContentArea, .gridBrowseContent2{
+  float: none !important;
+  width: 100%;
+  max-width: 740px;
+  margin: auto;
+}
+ */
 
-.searchResult .gridBrowseCol2{width: 100% !important; padding: 1rem !important;}
-.searchResult .dpBibTitle{display: block !important; padding: 0 !important;}
+#contentColumn{
+  width: 100%;
+  margin: 0 !important;
+  background-color: #f7f6f5;
+  overflow: hidden;
+}
+
+#mainContentArea{
+  width: 100% !important;
+}
+
+
+
+.gridBrowseContent2{
+  position: relative;
+  float: none;
+  margin: 0 !important;
+  background-color: #f7f6f5;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  border-bottom: 0 !important;
+}
+
+.gridBrowseContent2:hover{
+  border-right: 0 !important;
+  border-left: 0 !important;
+  background-color: rgba(247, 246, 245, .5) !important;
+}
+
+
+.gridBrowseCol2, .ItemsContainer, .moreDetailsAnyComponent{
+  display: block !important;
+  width: 70% !important;
+  max-width: 68.75rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+
+
+.gridBrowseCol2{
+  padding: 16px 0 36px 0 !important;
+ }
+
+
+.title, .customHeader{
+  line-height: 1.1;
+  font-family: inherit !important;
+  font-weight: 400 !important;
+}
+
+.recordDetailPage .title{
+  margin-bottom: 4px;
+  font-size: 36px !important;
+}
+
+.title .customSecondaryText{
+  display: none;
+}
+
+
+.itemBookCover{
+  width: 300px !important;
+  margin-right: 2rem;
+  padding-right: 0 !important;
+  text-align: right;
+}
+
+.itemBookCover img{
+  display: none;
+  width: 100%;
+  height: auto;
+  max-height: none !important;
+}
+
+
+.dpBibTitle{
+  width: auto;
+  padding-left: 1.5rem;
+  padding-right: 0 !important;
+}
+
+
+.dpBibAuthor{
+  font-family: Georgia;
+  font-style: italic;
+  font-size: 24px;
+}
+
+.dpBibAuthor a{
+  color: inherit !important;
+}
+
+
+
+.dpBibTitle .recordDetailValue{
+  font-size: .7rem;
+}
+
+.dpBibTitle .recordDetailValue > span{
+  display: inline-block;
+  margin: 4px 6px 4px 0;
+  padding: 4px;
+  color: #706259;
+  background-color: #d8d8d8;
+}
+
+
+.availabilityMessage{
+  padding: 0 !important;
+}
+
+.availabilitySummaryArea{
+  margin-top: 3.5em;
+}
+
+.dpBibHoldingStatement{
+  margin-bottom: .4em;
+}
+
+
+.itemsNotAvailable, .itemsAvailable{
+  display: block;
+  margin-top: 1.5em;
+  margin-bottom: 1px;
+  font-size: 20px;
+  text-transform: uppercase;
+ }
+
+
+.gridBrowseCol2 .requestButton{
+
+  margin-top: 1.4em;
+
+}
+
+.holdsMessage{
+  font-style: italic;
+}
+
+
+.itemTable{
+  width: 100%;
+  margin: auto;
+}
+
+.itemTable th{
+  font-weight: 400 !important;
+  text-transform: uppercase;
+}
+
+.recordDetailPage .itemTable td{
+  padding: 6px 0 !important;
+  border-bottom: 1px solid #eee;
+}
+
+
+.sectionHeader{
+  margin: 1rem 0 2px 0 !important;
+  border-bottom: 0 !important;
+  font-style: italic;
+}
+
+/*content categories*/
+.contentCategories{
+  padding-top: 1rem !important;
+}
+
+#selectedCategory{
+  padding: .5rem 1rem !important;
+  border: 0 !important;
+  background-color: #fff !important;
+  font-family: inherit !important;
+  font-weight: 400 !important;
+  text-transform: uppercase;
+}
+
+.contentCategoryLink{
+  margin-left: .5rem !important;
+  padding: .5rem 1rem !important;
+  border: 0 !important;
+  font-family: inherit !important;
+  font-weight: 400 !important;
+  background-color: transparent !important;
+  text-transform: uppercase;
+}
+
+
+/*search results*/
+
+.resultsSummary{
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  margin: 2rem 0 1rem 0;
+}
+
+.searchResultsPage .contentCategories, .searchResultsPage #searchResultsAnyComponent{
+  max-width: 68.75rem;
+  margin: auto !important;
+}
+
+.searchResult .ItemsContainer{
+  width: 100% !important;
+}
+
+.searchResult .availabilitySummaryArea{
+  margin-top: 0;
+  width: 60%;
+  font-size: 90% !important;
+}
+
+.resultsView{
+  font-size: .875rem;
+}
+
+#leftColumn{
+  background-color: transparent !important;
+  width: 20% !important;
+  margin: 1rem 0 !important;
+  padding: 0 !important;
+}
+
+#currentRefinementWrapper{
+  background: transparent !important;
+  font-size: .875rem;
+  margin: .5rem 0 2rem 0 !important;
+  padding: 0 !important;
+}
+
+.currentRefinementHeader{
+  margin: 4px 0 !important;
+  padding: 0 !important;
+  border-bottom: 0 !important;
+  font-style: italic;
+}
+
+.facetGroupHeader{
+  font-size: .6875rem;
+  font-weight: 400 !important;
+  text-transform: uppercase;
+  letter-spacing: .3px
+}
+
+.customFacetHeader{
+  color: inherit !important;
+}
+
+.toggleContent{
+  font-size: .875rem;
+}
+
+.label{
+  float: left !important;
+  margin-right: 6px;
+}
+
+#innreachOtherSourcesHeader{
+  font-size: .875rem !important;
+  font-weight: 400 !important;
+}
+
+
+.searchResultsPage #mainContentArea{
+  float: left;
+  width: 80% !important;
+}
+
+.searchResult .gridBrowseCol1{
+  display: block !important;
+  padding-top: 1rem;
+}
+
+.searchResult{
+  border-bottom: 1px solid #bfb0a7 !important;
+  margin: 1em 0;
+  clear: none !important;
+  line-height: 1.3;
+}
+
+.searchResult .gridBrowseCol2{
+  width: 60% !important;
+  max-width: none;
+  margin-bottom: .5rem;
+  padding: 1rem 1rem 2rem 1rem !important;
+}
+
+.searchResult .dpBibTitle{
+  line-height: 1.4 !important;
+}
+
+.searchResultsPage .title{
+  font-size: 1.1875rem !important;
+  font-family: inherit !important;
+}
+
+.searchResultsPage .dpBibAuthor{
+  font-size: 1rem !important;
+  font-family: inherit !important;
+}
+
+.searchResultsPage .itemBookCover{
+  width: 133px !important;
+}
+
+.searchResultsPage .itemBookCover img{
+  display: block;
+}
+
+.searchResultsPage .availabilityMessage{
+  font-size: .875rem;
+}
+
+.searchResultsPage .itemsAvailable, .searchResultsPage .itemsNotAvailable{
+  margin-top: 1rem;
+
+}
 
 /*footer*/
-#homepageFooterArea, #footerArea, #bookcartFooterArea{display: none; width: 100% !important}
-.footerContentContainer{max-width: 960px; margin: 0 auto !important; border-top: 0 !important;}
-.footerContent{border-top: 0 !important;}
+#homepageFooterArea, #footerArea, #bookcartFooterArea{
+  display: none;
+  width: 100% !important}
+.footerContentContainer{
+  max-width: 68.75rem;
+  margin: 0 auto !important;
+  border-top: 0 !important;
+}
+
+.footerContent{
+  border-top: 0 !important;
+}

@@ -1,5 +1,19 @@
 console.log('better encore')
 
+var replace_thumbs = function(){
+  var covers = document.getElementsByClassName('itemBookCover');
+
+  for (i = 0; i < covers.length; i++){
+    var cover = covers[i];
+    console.log(cover)
+    var img = cover.getElementsByTagName('img')[0];
+    var src = img.src;
+    var new_src = src.replace('thumb', 'large');
+    console.log(img,src,new_src)
+    img.src = new_src;
+  }
+}
+
 var replace_cover = function(){
   var cover_div, syndetics, syndetics_url, encore_img;
 
@@ -35,26 +49,39 @@ var replace_cover = function(){
   }
 }
 
-var clone_request_button = function(){
-  var section = document.getElementsByClassName('dpBibTitle')[0];
-  var request_button = document.getElementsByClassName('requestButton')[0];
-  var new_button = request_button.cloneNode(true);
+/*var clone_request_button = function(){
+  var sections, section, request_buttons, request_button, new_button
 
-  section.appendChild(new_button);
+  sections = document.getElementsByClassName('dpBibTitle');
+  request_buttons = document.getElementsByClassName('requestButton');
 
-}
+  for (i=0;i < sections.length;i++){
+    section = sections[i];
+    console.log(section)
+    request_button = request_buttons[i];
+    console.log(request_button)
+    new_button = request_button.cloneNode(true);
+    section.appendChild(new_button);
+  }
+
+}*/
 
 var body = document.getElementsByTagName('body')[0];
 
 if (!body.classList.contains('searchResultsPage')){
   replace_cover();
 }
-clone_request_button();
+
+if (body.classList.contains('searchResultsPage')){
+  replace_thumbs();
+  console.log('yo')
+}
+//clone_request_button();
 
 document.getElementById('searchString').placeholder = "Search for a title, an author, or a topic";
 
-var linkin = document.getElementById('innreachSearchLink6Component');
+/*var linkin = document.getElementById('innreachSearchLink6Component');
 var linkin_copy = linkin.cloneNode(true);
 linkin_copy.innerHTML = "Search Linkin libraries"
 
-document.getElementsByClassName('backToPrevious')[0].appendChild(linkin_copy);
+document.getElementsByClassName('backToPrevious')[0].appendChild(linkin_copy);*/
