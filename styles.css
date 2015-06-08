@@ -1,5 +1,5 @@
 /*things to hide*/
-#rightColumn, #prevNextResultNavigator, .prevNextHeader, #bestBetsAnyComponent, #NoveListToggleWrapper, .itemMediaIcon, .addtlActions, .addthis_toolbox, #genericLinkImage, #articlesPreviewAnyComponent, .pipeDivider, #googleBookPreviewAnyComponent, .ratingReviewsSummary, #directLinkImage, .pageWrapperPush, .myAccountBar, #bookCartLinkAnyComponent, h2.facetHeader, #searchFormComponent_0, #relatedSearchesTitle, #authoritySuggestionColumn, #expandTagCloudColumn, #otherSourcesAnyComponent_0, .itemsContainerPopUpTrigger, .catalogPreview, #returnToSearchResultsLinkComponent, .otherSourcesWrapper, #moreResourcesLinkComponent, .portfolioImage{
+#rightColumn, #prevNextResultNavigator, .prevNextHeader, #bestBetsAnyComponent, #NoveListToggleWrapper, .itemMediaIcon, .addtlActions, .addthis_toolbox, #genericLinkImage, #articlesPreviewAnyComponent, .pipeDivider, #googleBookPreviewAnyComponent, .ratingReviewsSummary, #directLinkImage, .pageWrapperPush, .myAccountBar, #bookCartLinkAnyComponent, h2.facetHeader, #searchFormComponent_0, #relatedSearchesTitle, #authoritySuggestionColumn, #expandTagCloudColumn, #otherSourcesAnyComponent_0, .itemsContainerPopUpTrigger, .catalogPreview, #returnToSearchResultsLinkComponent, .otherSourcesWrapper, #moreResourcesLinkComponent, .portfolioImage, .recordDetailPage .bibInfoHeader{
   display: none !important;
 }
 
@@ -36,6 +36,10 @@ h1,h2,h3,h4,h5,h6{
   color: #706259 !important;
 }
 
+#advancedSearchTitle,{
+  font-family: inherit !important;
+}
+
 #contentWrapper, #homepageContentWrapper{
   position: static !important;
   width: 100% !important;
@@ -48,10 +52,6 @@ h1,h2,h3,h4,h5,h6{
     border-bottom: 0;
   box-shadow: none;
   color: inherit !important;
-}
-
-.contentCategoryLink{
-  background-image: none !important;
 }
 
 
@@ -209,6 +209,7 @@ h1,h2,h3,h4,h5,h6{
 /*search results*/
 #mainContentArea{
   float: left !important;
+  width: 80% !important;
 }
 
 .gridBrowseContent2:hover{
@@ -221,6 +222,7 @@ h1,h2,h3,h4,h5,h6{
 /*record*/
 
 .recordDetailPage #mainContentArea{
+  width: 100% !important;
   border-top: 0 !important;
   margin-bottom: 0 !important;
 }
@@ -230,10 +232,6 @@ h1,h2,h3,h4,h5,h6{
   margin: 0 !important;
   background-color: #f7f6f5;
   overflow: hidden;
-}
-
-#mainContentArea{
-  width: 100% !important;
 }
 
 .gridBrowseContent2{
@@ -282,7 +280,7 @@ h1,h2,h3,h4,h5,h6{
   background: #fff;
 }
 
-.availableItemsSection, .allItemsSection, #bibInfoDetails{
+.availableItemsSection, .allItemsSection, #bibInfoDetails, .externalResourceDetails tbody{
   display: block !important;
   width: 60% !important;
   max-width: 68.75rem;
@@ -291,9 +289,13 @@ h1,h2,h3,h4,h5,h6{
   overflow: hidden;
 }
 
+.externalResourceDetails{
+  width: 100%;
+  background-color: #fff;
+}
+
 .recordDetailPage .bibInfoLabel, .ermMoreInfo .bibInfoLabel{
   font-size: .875rem;
-  text-transform: uppercase;
 }
 
 
@@ -470,12 +472,13 @@ h1,h2,h3,h4,h5,h6{
 
 .contentCategoryLink{
   top: 0 !important;
-  margin-left: .5rem !important;
+  margin-left: 0 !important;
   padding: 1rem !important;
   border: 0 !important;
+  background-image: none !important;
+  background-color: transparent !important;
   font-family: inherit !important;
   font-weight: 400 !important;
-  background-color: transparent !important;
   text-transform: uppercase;
 }
 
@@ -561,11 +564,6 @@ h1,h2,h3,h4,h5,h6{
   text-transform: uppercase;
 }
 
-.searchResultsPage #mainContentArea{
-  float: left;
-  width: 80% !important;
-}
-
 .searchResult .gridBrowseCol1{
   display: block !important;
   width: 30% !important;
@@ -605,9 +603,25 @@ h1,h2,h3,h4,h5,h6{
   max-height: 200px !important;
 }
 
-.itemBookCover.no-cover{
-  min-height: 180px;
-  background: rgba(112, 98, 89, .1);
+.overdrive-sample-link{
+  background-color: #b8b8b8 !important;
+}
+
+.overdrive-sample-link-text{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: table !important;
+  margin: auto !important;
+  width: 100%;
+  height: auto;
+  font-size: 1rem;
+}
+
+.overdrive-sample-link-image{
+  display: none !important;
 }
 
 .availabilityMessage, .holdsMessage{
@@ -708,9 +722,10 @@ portfolioName{
   font-size: .875rem;
 }
 
-.articlesPage #mainContentArea{
+.articlesPage #mainContentArea, .noResultsPage #mainContentArea{
   float: none !important;
-  max-width: 68.75rem;
+  width: 100% !important;
+  max-width: 68.75rem !important;
   margin: auto !important;
 }
 
@@ -782,7 +797,7 @@ portfolioName{
 
 .footerContentContainer{
   max-width: 68.75rem;
-  margin: 1rem auto !important;
+  margin: .5rem auto !important;
   padding-top: .5rem;
   border-top: 0 !important;
   background-color: #fff !important;
@@ -794,7 +809,9 @@ portfolioName{
 }
 
 .footerColumn4, #copyright{
+  margin: 1rem 0 !important;
   border: 0 !important;
+  line-height: 1;
 }
 
 .footerBrandingArea{
@@ -806,4 +823,15 @@ portfolioName{
   position: static !important;
   max-width: 68.75rem;
   margin: auto;
+  padding: 0 !important;
+  background: none !important;
+}
+
+.footerBackToTopLink:before{
+  content: '\2191';
+}
+
+.recentlyViewedItems li, .recentSearches li{
+  padding: 0 0 .5rem;
+  line-height: 1.4;
 }

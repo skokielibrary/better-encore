@@ -1,6 +1,6 @@
 console.log('better encore')
 
-var replace_thumbs = function(){
+/*var replace_thumbs = function(){
   var covers = document.getElementsByClassName('itemBookCover');
 
   for (i = 0; i < covers.length; i++){
@@ -8,6 +8,51 @@ var replace_thumbs = function(){
     var img = cover.getElementsByTagName('img')[0];
     var src = img.src;
     var new_src = src.replace('thumb', 'large');
+    img.src = new_src;
+  }
+}*/
+
+var replace_thumbs = function(){
+  var covers = document.getElementsByClassName('itemBookCover');
+  var re = /(upc|isxn)\=[a-zA-Z0-9]+/g;
+
+  for (i = 0; i < covers.length; i++){
+    var cover = covers[i];
+    var img = cover.getElementsByTagName('img')[0];
+    var src = img.src;
+
+    console.log(src)
+
+    var m;
+    var matches = {};
+
+    while ((m = re.exec(src)) != null){
+      if (m[1] == 'upc'){
+        matches.upc = m[0];
+      }
+      else{
+        matches.isxn = m[0];
+      }
+    }
+    console.log(matches)
+    console.log('---done---')
+
+    if (matches){
+      if (matches.upc){
+        var rec = matches.upc;
+      }
+      else if (matches.isxn){
+        var rec = matches.isxn;
+        rec = rec.replace('isxn', 'isbn');
+      }
+    }
+    else{
+      var rec = 'isbn=99999999';
+    }
+
+    var new_src = 'http://www.syndetics.com/index.php?' + rec + '/MC.gif&client=skopl&type=hw7';
+    console.log(new_src)
+
     img.src = new_src;
   }
 }
@@ -83,18 +128,19 @@ var clone_articles_nav = function(){
   nav.parentNode.removeChild(nav);
 }
 
-var body = document.getElementsByTagName('body')[0];
-
-if (body.classList.contains('recordDetailPage')){
-  replace_cover();
-  //clone_request_button();
-
-  document.getElementById('searchString').placeholder = "Search for a title, an author, or a topic";
+var clone_linkin = function(){
   var linkin = document.getElementById('innreachSearchLink6Component');
   var linkin_copy = linkin.cloneNode(true);
   linkin_copy.innerHTML = "Search Linkin libraries"
   document.getElementsByClassName('backToPrevious')[0].appendChild(linkin_copy);
+}
 
+var body = document.getElementsByTagName('body')[0];
+document.getElementById('searchString').placeholder = "Search for a title, an author, or a topic";
+
+if (body.classList.contains('recordDetailPage')){
+  replace_cover();
+  clone_linkin();
 }
 
 if (body.classList.contains('searchResultsPage')){
