@@ -3,12 +3,12 @@
   "content_scripts": [ {
     "css": [ "styles.css"],
     "js": [ "scripts.js" ],
-    "matches": [ "https://encore.skokielibrary.info/*" ]
+    "matches": [ "https://encore.skokielibrary.info/*", "http://encore.skokielibrary.info/*" ]
   } ],
   "description": "A better UI for Encore",
   "manifest_version": 2,
   "name": "Better Encore",
-  "permissions": [ "https://encore.skokielibrary.info/*"],
+  "permissions": [ "https://encore.skokielibrary.info/*", "http://encore.skokielibrary.info/*"],
   "short_name": "Better Encore",
   "version": "0.1",
   "icons": { "16": "icon-on.png" },
