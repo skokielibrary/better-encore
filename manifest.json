@@ -1,18 +1,18 @@
 {
   "author": "Brodie Austin",
-  "background": {
-   "scripts": ["background.js"]
-  },
+  "content_scripts": [ {
+    "css": [ "styles.css"],
+    "js": [ "scripts.js" ],
+    "matches": [ "https://encore.skokielibrary.info/*", "http://encore.skokielibrary.info/*" ]
+  } ],
   "description": "A better UI for Encore",
   "manifest_version": 2,
   "name": "Better Encore",
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": [ "https://encore.skokielibrary.info/*", "http://encore.skokielibrary.info/*"],
   "short_name": "Better Encore",
   "version": "0.1",
-  "icons": { "16": "icon-off.png", "16": "icon-on.png" },
+  "icons": { "16": "icon-on.png" },
   "browser_action": {
-    "default_icon": "icon-off.png"
+    "default_icon": "icon-on.png"
   }
 }
