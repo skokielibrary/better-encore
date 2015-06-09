@@ -32,6 +32,15 @@ h1,h2,h3,h4,h5,h6{
   color: #00747F !important;
 }
 
+.external{
+  background: none !important;
+  padding-right: 0 !important;
+}
+
+.otherSourceResults .innreachLink:after{
+  content: "\2192";
+}
+
 .customHeader, .customRecordDetailPage .customHeader.customToggle, .customRecordDetailPage .customHeader.customToggle:hover{
   color: #706259 !important;
 }
@@ -54,6 +63,9 @@ h1,h2,h3,h4,h5,h6{
   color: inherit !important;
 }
 
+button{
+  cursor: pointer;
+}
 
 .button{
   background-image: none !important;
@@ -74,6 +86,13 @@ h1,h2,h3,h4,h5,h6{
   font-weight: 400 !important;
 }
 
+.text-button{
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: #00747F;
+  text-decoration: underline;
+}
 
 /*top banner*/
 #bannertop{
@@ -83,7 +102,7 @@ h1,h2,h3,h4,h5,h6{
   float: none !important;
   max-width: 68.75rem;
   width: 100% !important;
-  margin: 0  auto .6rem !important;
+  margin: 0  auto 2rem !important;
   height: 36px;
   line-height: 36px !important;
   padding: 0 !important;
@@ -96,13 +115,25 @@ h1,h2,h3,h4,h5,h6{
 #bannertop a{
   display: inline-block;
   margin-left: 1rem;
-  font-size: .8rem;
+  font-size: .875rem;
   color: #888;
 }
 
 #patronAlertsUpdateAnyComponent img{
   margin-top: 0 !important;
   vertical-align: middle !important;
+}
+
+.myAccountInfo{
+  margin-top: -2px;
+}
+
+.loginLogoutLink{
+  display: inline-block;
+  padding: .625rem 1.25rem .6875rem;
+  line-height: 1;
+  background: #EE3E2C;
+  color: #fff !important;
 }
 
 
@@ -119,7 +150,7 @@ h1,h2,h3,h4,h5,h6{
   position: relative;
   display: block !important;
   margin: auto !important;
-  border-bottom: 1px solid #b2b2b2 !important;
+  border: 1px solid #b2b2b2 !important;
   text-align: left !important;
 }
 
@@ -277,15 +308,15 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .recordDetailPage .ItemsContainer, .recordDetailPage .moreDetailsAnyComponent{
+  padding-top: 1.5rem;
   background: #fff;
 }
 
-.availableItemsSection, .allItemsSection, #bibInfoDetails, .externalResourceDetails tbody{
-  display: block !important;
+.bibHoldingsWrapper, #bibInfoDetails, .externalResourceDetails tbody{
   width: 60% !important;
   max-width: 68.75rem;
   margin: auto;
-  padding: 2rem 0;
+  padding: 0;
   overflow: hidden;
 }
 
@@ -298,6 +329,9 @@ h1,h2,h3,h4,h5,h6{
   font-size: .875rem;
 }
 
+.recordDetailPage .recordDetailValue{
+  width: 70%;
+}
 
 .title{
   line-height: 1.4;
@@ -426,12 +460,22 @@ h1,h2,h3,h4,h5,h6{
 .holdsMessage{
   font-style: italic;
   margin-top: 0 !important;
+  text-transform: uppercase;
 }
+
+.holdings-toggle.show-available{
+  content: "Show available";
+}
+
+.holding-toggle.show-all{
+  content: "Show all";
+}
+
 
 
 .itemTable{
   width: 100%;
-  margin: auto;
+  margin: 1rem auto;
 }
 
 .itemTable th{

@@ -1,17 +1,5 @@
 console.log('better encore')
 
-/*var replace_thumbs = function(){
-  var covers = document.getElementsByClassName('itemBookCover');
-
-  for (i = 0; i < covers.length; i++){
-    var cover = covers[i];
-    var img = cover.getElementsByTagName('img')[0];
-    var src = img.src;
-    var new_src = src.replace('thumb', 'large');
-    img.src = new_src;
-  }
-}*/
-
 var replace_thumbs = function(){
   var covers = document.getElementsByClassName('itemBookCover');
   var re = /(upc|isxn)\=[a-zA-Z0-9]+/g;
@@ -105,9 +93,7 @@ var clone_request_button = function(){
 
   for (i=0;i < sections.length;i++){
     section = sections[i];
-    console.log(section)
     request_button = request_buttons[i];
-    console.log(request_button)
     new_button = request_button.cloneNode(true);
     section.appendChild(new_button);
     request_button.parentElement.removeChild(request_button);
@@ -116,13 +102,10 @@ var clone_request_button = function(){
 }
 
 var clone_articles_nav = function(){
-  console.log('hi')
   var nav = document.getElementById('leftColumn');
   var main = document.getElementById('mainContentArea');
   var new_nav = nav.cloneNode(true);
   new_nav.classList.add('new-nav')
-
-  console.log(new_nav)
 
   main.insertBefore(new_nav, main.firstChild);
   nav.parentNode.removeChild(nav);
@@ -135,12 +118,55 @@ var clone_linkin = function(){
   document.getElementsByClassName('backToPrevious')[0].appendChild(linkin_copy);
 }
 
+var create_holdings_toggle = function(){
+  var all = document.getElementsByClassName('allItemsSection')[0];
+
+  console.log(all)
+
+  if (all !== undefined){
+    var holdings = document.getElementsByClassName('bibHoldingsWrapper')[0];
+    var button = document.createElement('button');
+    button.classList.add('text-button', 'holdings-toggle', 'show-available');
+    button.innerText = "Show available";
+    button.id = "holdings-toggle";
+
+    holdings.insertBefore(button, holdings.firstChild);
+
+    document.getElementById('holdings-toggle').onclick = function(){
+      toggle_holdings(this);
+    }
+  }
+}
+
+var toggle_holdings = function(element){
+  var available = document.getElementsByClassName('availableItemsSection')[0];
+  var all = document.getElementsByClassName('allItemsSection')[0];
+
+  var toggle = element;
+
+  if (toggle.classList.contains('show-available')){
+    available.style.display = "block";
+    all.style.display = "none"
+    toggle.classList.remove('show-available');
+    toggle.classList.add('show-all');
+    toggle.innerText = 'Show all';
+  }
+  else{
+    available.style.display = "none";
+    all.style.display = "block"
+    toggle.classList.remove('show-all');
+    toggle.classList.add('show-available');
+    toggle.innerText = 'Show available';
+  }
+}
+
 var body = document.getElementsByTagName('body')[0];
 document.getElementById('searchString').placeholder = "Search for a title, an author, or a topic";
 
 if (body.classList.contains('recordDetailPage')){
   replace_cover();
   clone_linkin();
+  create_holdings_toggle();
 }
 
 if (body.classList.contains('searchResultsPage')){
